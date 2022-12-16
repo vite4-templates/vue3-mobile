@@ -9,16 +9,17 @@ const addOneCounter = () => counter.increment()
 </script>
 
 <template>
-  <h1>Home</h1>
+  <h1 class="home">Home</h1>
   <h2>{{ count }}</h2>
   <button @click="addOneCount">Add One</button>
   <h2>{{ counter.count }}</h2>
   <button @click="addOneCounter">Add One</button>
 </template>
 
-<style scoped>
-.read-the-docs {
+<style scoped lang="less">
+.home {
   display: block;
   color: #888;
+  background-color: @color;
 }
 </style>

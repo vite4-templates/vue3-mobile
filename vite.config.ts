@@ -10,6 +10,18 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // 把 @ 指向到 src 目录去
     },
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        additionalData: `@import "${path.resolve(
+          __dirname,
+          'src/styles/variable.less',
+        )}";`,
+      },
+    },
+  },
+
   build: {
     // 消除打包大小超过500kb警告
     chunkSizeWarningLimit: 2000,
