@@ -19,10 +19,20 @@ const count = ref(0)
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">
+      create-vue
+    </a>
+    , the official Vue + Vite starter
   </p>
+  <div
+    a="aa"
+    b="b"
+    cccccccccccccc="cccccccccccc"
+    dddddddd="ddddddddddd"
+    eeeeeeee="eeeeeeeee"
+  >
+    nihaoma
+  </div>
   <p>
     Install
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
@@ -33,6 +43,7 @@ const count = ref(0)
 
 <style scoped>
 .read-the-docs {
+  display: block;
   color: #888;
 }
 </style>

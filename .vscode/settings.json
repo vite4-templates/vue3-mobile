@@ -12,5 +12,8 @@
     "source.fixAll.stylelint": true
   },
   // stylelint校验的文件格式
-  "stylelint.validate": ["css", "less", "vue", "html"]
+  "stylelint.validate": ["css", "less", "vue", "html"],
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
