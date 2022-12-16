@@ -15,6 +15,13 @@ const addOneCounter = () => counter.increment()
   <h2>{{ counter.count }}</h2>
   <button @click="addOneCounter">Add One</button>
   <van-button type="primary">主要按钮</van-button>
+  <p>浏览器厂商前缀自动添加测试：未通过</p>
+  <div class="flex">
+    <div>1</div>
+    <div>2</div>
+  </div>
+  <p>px转vw自动转换测试：通过</p>
+  <div class="test-px-vw">测试</div>
 </template>
 
 <style scoped lang="less">
@@ -22,5 +29,13 @@ const addOneCounter = () => counter.increment()
   display: block;
   color: #888;
   background-color: @color;
+}
+
+.flex {
+  display: flex;
+}
+
+.test-px-vw {
+  font-size: 75px;
 }
 </style>
