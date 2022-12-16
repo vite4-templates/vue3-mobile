@@ -1,11 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useCounterStore } from '@/store/counter'
+import Api from '@/api/user'
 
 const counter = useCounterStore()
 const count = ref(0)
 const addOneCount = () => count.value++
 const addOneCounter = () => counter.increment()
+
+const login = async () => {
+  const { code, result, message } = await Api.login({
+    username: 'a',
+    password: 'b',
+  })
+  console.log({ code, result, message })
+  // do something
+}
 </script>
 
 <template>
@@ -14,7 +24,7 @@ const addOneCounter = () => counter.increment()
   <button @click="addOneCount">Add One</button>
   <h2>{{ counter.count }}</h2>
   <button @click="addOneCounter">Add One</button>
-  <van-button type="primary">主要按钮</van-button>
+  <van-button type="primary" @click="login">Login</van-button>
   <p>浏览器厂商前缀自动添加测试：未通过</p>
   <div class="flex">
     <div>1</div>
