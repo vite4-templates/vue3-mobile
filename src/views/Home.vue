@@ -14,6 +14,7 @@ const addOneCounter = () => counter.increment()
   <button @click="addOneCount">Add One</button>
   <h2>{{ counter.count }}</h2>
   <button @click="addOneCounter">Add One</button>
+  <van-button type="primary">主要按钮</van-button>
 </template>
 
 <style scoped lang="less">
