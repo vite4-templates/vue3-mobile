@@ -25,11 +25,14 @@ const login = async () => {
   <h2>{{ counter.count }}</h2>
   <button @click="addOneCounter">Add One</button>
   <van-button type="primary" @click="login">Login</van-button>
-  <p>浏览器厂商前缀自动添加测试：未通过</p>
+  <p>浏览器厂商前缀自动添加测试：通过</p>
   <div class="flex">
     <div>1</div>
     <div>2</div>
   </div>
+  <p>浏览器厂商前缀自动添加测试：通过+1</p>
+  <label for="yy">用户名</label>
+  <input type="text" placeholder="username" />
   <p>px转vw自动转换测试：通过</p>
   <div class="test-px-vw">测试</div>
 </template>
@@ -47,5 +50,18 @@ const login = async () => {
 
 .test-px-vw {
   font-size: 75px;
+}
+
+label {
+  user-select: none;
+}
+
+::selection {
+  color: white;
+  background: blue;
+}
+
+::placeholder {
+  color: gray;
 }
 </style>
